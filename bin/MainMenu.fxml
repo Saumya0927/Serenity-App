@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="fullBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuController">
+  <tabs>
+    <Tab text="Main Menu">
+         <content>
+            <AnchorPane fx:id="background" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="themeList" layoutX="461.0" layoutY="10.0" onAction="#changeTheme" prefHeight="25.0" prefWidth="125.0" promptText="Choose Theme" />
+                  <Label fx:id="welcomeMsg" layoutX="14.0" layoutY="349.0" text="Welcome back!" />
+                  <RadioButton fx:id="q1o1" layoutX="13.0" layoutY="39.0" mnemonicParsing="false" text="Yes">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="question1group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="q1o2" layoutX="118.0" layoutY="39.0" mnemonicParsing="false" text="No" toggleGroup="$question1group" />
+                  <RadioButton fx:id="q1o3" layoutX="223.0" layoutY="39.0" mnemonicParsing="false" text="Maybe" toggleGroup="$question1group" />
+                  <RadioButton fx:id="q2o1" layoutX="14.0" layoutY="87.0" mnemonicParsing="false" text="Yes">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="question2group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="q2o2" layoutX="119.0" layoutY="87.0" mnemonicParsing="false" text="No" toggleGroup="$question2group" />
+                  <RadioButton fx:id="q2o3" layoutX="224.0" layoutY="87.0" mnemonicParsing="false" text="Maybe" toggleGroup="$question2group" />
+                  <RadioButton fx:id="q3o1" layoutX="14.0" layoutY="139.0" mnemonicParsing="false" text="Yes">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="question3group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="q3o2" layoutX="119.0" layoutY="139.0" mnemonicParsing="false" text="No" toggleGroup="$question3group" />
+                  <RadioButton fx:id="q3o3" layoutX="224.0" layoutY="139.0" mnemonicParsing="false" text="Maybe" toggleGroup="$question3group" />
+                  <RadioButton fx:id="q4o1" layoutX="14.0" layoutY="193.0" mnemonicParsing="false" text="Yes">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="question4group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="q4o2" layoutX="119.0" layoutY="193.0" mnemonicParsing="false" text="No" toggleGroup="$question4group" />
+                  <RadioButton fx:id="q4o3" layoutX="224.0" layoutY="193.0" mnemonicParsing="false" text="Maybe" toggleGroup="$question4group" />
+                  <RadioButton fx:id="q5o1" layoutX="14.0" layoutY="250.0" mnemonicParsing="false" text="Yes">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="question5group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="q5o2" layoutX="119.0" layoutY="250.0" mnemonicParsing="false" text="No" toggleGroup="$question5group" />
+                  <RadioButton fx:id="q5o3" layoutX="225.0" layoutY="250.0" mnemonicParsing="false" text="Maybe" toggleGroup="$question5group" />
+                  <Label fx:id="question1" layoutX="13.0" layoutY="14.0" text="Have you had difficulty sleeping/getting adequate rest?" />
+                  <Label fx:id="question2" layoutX="11.0" layoutY="63.0" text="Have you gotten enough food and water?" />
+                  <Label fx:id="question3" layoutX="11.0" layoutY="116.0" text="Would you describe your relationships with friends and family as positive?" />
+                  <Label fx:id="question4" layoutX="13.0" layoutY="169.0" text="Have you taken the time to get some physical activity on at least three days?" />
+                  <Label fx:id="question5" layoutX="16.0" layoutY="226.0" text="Has anxiety and depression negatively affected your work, study or personal relationships?" />
+                  <Button fx:id="submitQ" layoutX="476.0" layoutY="332.0" mnemonicParsing="false" onAction="#submitButton" text="Submit Questions" />
+                  <RadioButton fx:id="q6o1" layoutX="14.0" layoutY="311.0" mnemonicParsing="false" text="Yes">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="question6group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="q6o2" layoutX="119.0" layoutY="311.0" mnemonicParsing="false" text="No" toggleGroup="$question6group" />
+                  <RadioButton fx:id="q6o3" layoutX="225.0" layoutY="311.0" mnemonicParsing="false" text="Maybe" toggleGroup="$question6group" />
+                  <Label fx:id="question6" layoutX="16.0" layoutY="287.0" text="Have you experienced positive results from your last login? (Select &quot;Maybe&quot; if this is the first session)" />
+               </children>
+            </AnchorPane>
+         </content></Tab>
+    <Tab text="Help">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="instrcText" layoutX="247.0" layoutY="177.0" text="Instructions go here" />
+               </children>
+            </AnchorPane>
+         </content></Tab>
+      <Tab text="Journal">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="journalText" alignment="TOP_LEFT" layoutX="14.0" layoutY="14.0" prefHeight="326.0" prefWidth="571.0" promptText="Dear journal...." />
+                  <Button layoutX="279.0" layoutY="345.0" mnemonicParsing="false" onAction="#saveJournal" text="Save" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Audio ">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="playButton1" layoutX="74.0" layoutY="89.0" mnemonicParsing="false" onAction="#play1" text="Play" />
+                  <ImageView fitHeight="42.0" fitWidth="43.0" layoutX="72.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/note.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="42.0" fitWidth="43.0" layoutX="279.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/bird.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="42.0" fitWidth="43.0" layoutX="472.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/moon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="playButton2" layoutX="281.0" layoutY="89.0" mnemonicParsing="false" onAction="#play2" text="Play" />
+                  <Button fx:id="playButton3" layoutX="474.0" layoutY="89.0" mnemonicParsing="false" onAction="#play3" text="Play" />
+                  <Button fx:id="stopMusicButton" layoutX="280.0" layoutY="332.0" mnemonicParsing="false" onAction="#stopMusic" text="Stop" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Breathe">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="breatheButton" layoutX="235.0" layoutY="157.0" mnemonicParsing="false" onAction="#timeBreathe" prefHeight="58.0" prefWidth="132.0" text="Breathe">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font></Button>
+                  <Label fx:id="breatheInstrc" layoutX="228.0" layoutY="166.0" text="Breathe in..." visible="false">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="stopBreathing" layoutX="280.0" layoutY="316.0" mnemonicParsing="false" onAction="#stopBreathing" text="Stop" visible="false" />
+                  <Label fx:id="countdown" layoutX="293.0" layoutY="223.0" text="1" visible="false">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Resources">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="universityOptions" layoutX="106.0" layoutY="10.0" onAction="#findResource" prefHeight="25.0" prefWidth="186.0" />
+                  <Label layoutX="14.0" layoutY="14.0" text="I am currently in" />
+                  <Label fx:id="resourcesText" alignment="TOP_CENTER" layoutX="42.0" layoutY="94.0" prefHeight="183.0" prefWidth="517.0" wrapText="true" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
